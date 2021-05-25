@@ -1,16 +1,22 @@
-# This is a sample Python script.
+from modules.Administrator import Administrator
+from modules.Doctor import Doctor
+from modules.Document import Document
+from modules.Patient import Patient
+from modules.Report import Report
+from modules.Talk import Talk
+from modules.User import  User
+from modules.Voluntary import Voluntary
+from modules.Donations import Donations
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+administrator =  Administrator(1)
+user = User("id_user", "name", "email", "password", "telefone", "'created_at'")
 
+doctor = Doctor("endereco", "crm", user)
+document = Document("name", "url")
+donations = Donations("value", "contact", "cpf", "cnpj")
+patient = Patient("name", "address", "diagnosis")
+report = Report("name", "url")
+voluntary = Voluntary("name", "cpf", "telphone")
+talk = Talk("local", "theme", "size", voluntary)
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+print("FOI")
